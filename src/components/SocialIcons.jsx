@@ -1,7 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-import Line from '../UI/Line'
+import Line from '../UI/Line/Line'
+import LineContainer from '../UI/Line/LineContainer'
 import { Facebook, Github, Twitter, YouTube } from './SVGS'
 
 const Icons = styled.div`
@@ -36,7 +37,9 @@ const SocialIcons = () => {
           <YouTube width={25} height={25} fill="currentColor" />
         </NavLink>
       </div>
-      <Line />
+      <LineContainer>
+        <Line />
+      </LineContainer>
     </Icons>
   )
 }
