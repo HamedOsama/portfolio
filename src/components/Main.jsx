@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import MainContainer from '../UI/Containers/MainContainer'
 import CustomPageLink from './CustomPageLink'
 import Logo from './Logo'
+import MainAnimatedLogo from './MainAnimatedLogo'
 import PowerButton from './PowerButton'
 import SocialIcons from './SocialIcons'
 
@@ -16,6 +17,7 @@ const Main = () => {
       <Container>
         <PowerButton />
         <Logo />
+        <MainAnimatedLogo />
         <SocialIcons />
         <CustomPageLink
           title="Blog"
