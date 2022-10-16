@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import MainContainer from '../UI/Containers/MainContainer'
 import CustomPageLink from './CustomPageLink'
@@ -12,12 +12,17 @@ const Container = styled.div`
 `
 
 const Main = () => {
+  const [isOpened, setIsOpened] = useState(false);
+  const openHandler = () => {
+    setIsOpened(prev => !prev);
+  }
+  console.log(isOpened)
   return (
     <MainContainer>
       <Container>
         <PowerButton />
         <Logo />
-        <MainAnimatedLogo />
+        <MainAnimatedLogo onClick={openHandler} isOpened={isOpened} />
         <SocialIcons />
         <CustomPageLink
           title="Blog"

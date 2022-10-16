@@ -12,8 +12,8 @@ const rotate = keyframes`
 `
 const Container = styled.div`
   position: absolute;
-  top: 50%;
-  left:50%;
+  top:  ${props => props.isOpened ? '85%' : '50%'} ;
+  left: ${props => props.isOpened ? '92%' : '50%'} ;
   transform : translate(-50%,-50%);
   display: flex;
   align-items: center;
@@ -21,16 +21,17 @@ const Container = styled.div`
   flex-direction: column;
   gap: 1rem;
   cursor: pointer;
+  transition: 1s ease;
   .logo{
     animation: 1.5s ${rotate} infinite linear;
   }
 `
 
-const MainAnimatedLogo = () => {
+const MainAnimatedLogo = props => {
   return (
-    <Container>
-      <YinYang className="logo" width={200} height={200} fill="currentColor" />
-      <span>Click Here</span>
+    <Container isOpened={props.isOpened} onClick={props.onClick}>
+      <YinYang className="logo" width={props.isOpened ? 120 : 200} height={props.isOpened ? 120 : 200} fill="currentColor" />
+      {!props.isOpened && <span>Click Here</span>}
     </Container>
   )
 }
