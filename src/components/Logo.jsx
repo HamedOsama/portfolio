@@ -10,9 +10,9 @@ const LogoContainer = styled.h1`
   top: 2rem;
   z-index: 10;
 `
-const Logo = () => {
+const Logo = (props) => {
   return (
-    <LogoContainer>
+    <LogoContainer theme={props.theme}>
       HO
     </LogoContainer>
   )

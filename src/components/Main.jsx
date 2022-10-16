@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import DarkContainer from '../UI/Containers/DarkContainer'
 import MainContainer from '../UI/Containers/MainContainer'
 import CustomPageLink from './CustomPageLink'
 import Logo from './Logo'
 import MainAnimatedLogo from './MainAnimatedLogo'
 import PowerButton from './PowerButton'
 import SocialIcons from './SocialIcons'
+import { LightTheme, DarkTheme } from './Themes'
 
 const Container = styled.div`
   padding : 2rem;
@@ -21,9 +23,10 @@ const Main = () => {
     <MainContainer>
       <Container>
         <PowerButton />
-        <Logo />
+        <Logo theme={isOpened ? DarkTheme : LightTheme} />
         <MainAnimatedLogo onClick={openHandler} isOpened={isOpened} />
-        <SocialIcons />
+        <DarkContainer isOpened={isOpened} />
+        <SocialIcons theme={isOpened ? DarkTheme : LightTheme} />
         <CustomPageLink
           title="Blog"
           link="/blog"
@@ -37,6 +40,8 @@ const Main = () => {
           top="50%"
           left="calc(1rem + 2vw)"
           transform='translate(-50%,-50%) rotate(-90deg)'
+          is_opened={`${isOpened}`}
+          has_overlay={'true'}
         />
         <CustomPageLink
           title="About"
@@ -44,6 +49,8 @@ const Main = () => {
           bottom="1rem"
           left="calc(50% - 20vw)"
           transform='translateX(-50%)'
+          is_opened={`${isOpened}`}
+          has_overlay={'true'}
         />
         <CustomPageLink
           title="Skills"

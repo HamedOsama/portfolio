@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Line from '../UI/Line/Line'
 import LineContainer from '../UI/Line/LineContainer'
 import { Facebook, Github, Twitter, YouTube } from './SVGS'
-
+// import { DarkTheme } from './Themes'
 const Icons = styled.div`
   display: flex;
   flex-direction: column;
@@ -13,32 +13,33 @@ const Icons = styled.div`
   position: fixed;
   bottom: 0;
   left: 2rem;
+  z-index: 1;
 `
-const SocialIcons = () => {
+const SocialIcons = props => {
   return (
     <Icons>
       <div className="">
         <NavLink target="_blank" to={{ pathname: "https://github.com/HamedOsama" }}>
-          <Github width={25} height={25} fill="currentColor" />
+          <Github width={25} height={25} fill={props.theme.text} />
         </NavLink>
       </div>
       <div className="">
         <NavLink target="_blank" to={{ pathname: "https://github.com/HamedOsama" }}>
-          <Facebook width={25} height={25} fill="currentColor" />
+          <Facebook width={25} height={25} fill={props.theme.text} />
         </NavLink>
       </div>
       <div className="">
         <NavLink target="_blank" to={{ pathname: "https://github.com/HamedOsama" }}>
-          <Twitter width={25} height={25} fill="currentColor" />
+          <Twitter width={25} height={25} fill={props.theme.text} />
         </NavLink>
       </div>
       <div className="">
         <NavLink target="_blank" to={{ pathname: "https://github.com/HamedOsama" }}>
-          <YouTube width={25} height={25} fill="currentColor" />
+          <YouTube width={25} height={25} fill={props.theme.text} />
         </NavLink>
       </div>
       <LineContainer>
-        <Line />
+        <Line theme={props.theme} />
       </LineContainer>
     </Icons>
   )
