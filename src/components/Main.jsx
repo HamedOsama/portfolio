@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import DarkContainer from '../UI/Containers/DarkContainer'
 import MainContainer from '../UI/Containers/MainContainer'
 import CustomPageLink from './CustomPageLink'
+import Intro from './Intro'
 import Logo from './Logo'
 import MainAnimatedLogo from './MainAnimatedLogo'
 import PowerButton from './PowerButton'
@@ -60,6 +61,7 @@ const Main = () => {
           transform='translateX(-50%)'
         />
       </Container>
+      {isOpened && <Intro />}
     </MainContainer>
   )
 }
