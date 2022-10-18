@@ -9,7 +9,7 @@ import Work from "./Pages/Work"
 import About from "./Pages/About"
 function App() {
   return <>
-    <GlobalStyles />
+    <GlobalStyles scrollbar={false} />
     <ThemeProvider theme={LightTheme}>
       <Switch>
         <Route exact path="/" component={Main} />

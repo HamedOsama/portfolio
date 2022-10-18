@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import DarkContainer from '../UI/Containers/DarkContainer'
 import MainContainer from '../UI/Containers/MainContainer'
@@ -19,6 +19,11 @@ const Main = () => {
   const openHandler = () => {
     setIsOpened(prev => !prev);
   }
+  // useEffect(() => {
+  //   setTimeout(
+  //     () => setIsOpened(_ => true)
+  //     , 400)
+  // }, []);
   console.log(isOpened)
   return (
     <MainContainer>
