@@ -1,7 +1,6 @@
 import React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import Icon from '../components/icons/icon'
-import HideScrollBar from '../style/HideScrollBar.css'
 import img from '../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg'
 import Logo from '../components/Logo'
 import SocialIcons from '../components/SocialIcons'
