@@ -37,7 +37,7 @@ const AnchorSlider = props => {
     <Container>
       <Slider style={{ translateY: `${currentPosition}%` }}>
         {
-          [...Array(25)].map((_, i) => (
+          [...Array(26)].map((_, i) => (
             <Link className="chain" key={i} width={25} height={25} fill={props.theme.text} />
           )
           )

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import Icon from '../components/icons/icon'
 import img from '../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg'
@@ -7,13 +7,9 @@ import SocialIcons from '../components/SocialIcons'
 import { DarkTheme } from '../components/Themes'
 import PowerButton from '../components/PowerButton'
 import AnchorSlider from '../components/AnchorSlider'
+import { useDispatch } from 'react-redux'
+import { scrollbarActions } from '../features/scrollbar/scrollbar-slice'
 const BackgroundContainer = styled.div`
-body{
-  ::-webkit-scrollbar{
-    color: red;
-  }
-  background-color: red !important;
-}
   background-image: url(${img});
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,7 +22,7 @@ body{
 `
 const OverlayContainer = styled.div`
   /* background-color: ${props => `rgba(${props.theme.bodyRgba},0.8)`}; */
-  background-color : ${props => `rgba(0,0,0,0.8)`};
+  background-color : rgba(10,25,47,0.9);
   width : 100%;
   height : auto;
   padding: 100px 150px;
@@ -364,6 +360,11 @@ const Project = styled.div`
 `
 
 const Work = () => {
+  const dispatch = useDispatch();
+  useEffect(
+    () => {
+      dispatch(scrollbarActions.hide())
+    }, [dispatch])
   return (
     <BackgroundContainer>
       <OverlayContainer>

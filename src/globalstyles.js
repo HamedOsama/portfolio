@@ -48,7 +48,9 @@ const GlobalStyles = createGlobalStyle`
 }
 body {
   font-family: 'Source Sans Pro',sans-serif;
-  
+  ::-webkit-scrollbar{
+    display: ${props => props.scrollbar ? '' : 'none'};
+  }
 }
 a{
   text-decoration: none;

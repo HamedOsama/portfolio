@@ -34,23 +34,23 @@ const Main = () => {
         <DarkContainer isOpened={isOpened} />
         <SocialIcons theme={isOpened ? DarkTheme : LightTheme} />
         <CustomPageLink
-          title="Blog"
+          title="<Blog />"
           link="/blog"
           top="50%"
-          right="calc(1rem + 2vw)"
+          right="calc(1rem + 1vw)"
           transform='rotate(90deg) translate(-50%,-50%)'
         />
         <CustomPageLink
-          title="Work"
+          title="<Projects />"
           link="/work"
-          top="50%"
+          top="48%"
           left="calc(1rem + 2vw)"
           transform='translate(-50%,-50%) rotate(-90deg)'
           is_opened={`${isOpened}`}
           has_overlay={'true'}
         />
         <CustomPageLink
-          title="About"
+          title="<About />"
           link="/about"
           bottom="1rem"
           left="calc(50% - 20vw)"
@@ -59,7 +59,7 @@ const Main = () => {
           has_overlay={'true'}
         />
         <CustomPageLink
-          title="Skills"
+          title="<Skills />"
           link="/skills"
           bottom="1rem"
           left="calc(50% + 20vw)"
