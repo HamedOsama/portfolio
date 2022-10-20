@@ -1,9 +1,18 @@
 import React from 'react'
+import styled from 'styled-components'
+
+import Frameworks from './sections/Frameworks'
+import Languages from './sections/Languages'
+import VerticalLine from './VerticalLine'
 import WindowCard from './WindowCard'
 
+const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`
 const CardsContainer = () => {
   return (
-    <div>
+    <Container>
       <WindowCard
         title="<About Me />"
       >
@@ -13,7 +22,9 @@ const CardsContainer = () => {
           <p>Currently, I am focused on learning AI and ML;</p>
         </div>
       </WindowCard>
-      <div style={{ height: 75 }} />
+      <VerticalLine
+        height="100px"
+      />
       <WindowCard
         title="<Experience />"
       >
@@ -30,7 +41,21 @@ const CardsContainer = () => {
           <p>Designed and developed 10+ new features;</p>
         </div>
       </WindowCard>
-    </div>
+      {/* <VerticalLine
+        height="100px"
+        right={true}
+      /> */}
+      <VerticalLine
+        height="100px"
+        reverse={true}
+      />
+      <WindowCard
+        title="<Skills />"
+      >
+        <Languages />
+        <Frameworks />
+      </WindowCard>
+    </Container>
   )
 }
 

@@ -5,6 +5,9 @@ const Card = styled.div`
   background-color: #24292f;
   border-radius: 1rem;
   overflow: hidden;
+  flex-grow: 1;
+  /* width: max-content; */
+  /* flex: 1; */
 `
 const Container = styled.div`
   padding: 2rem ;
