@@ -29,8 +29,8 @@ const CardsContainer = () => {
         title="<Experience />"
       >
         <div >
-          <h3>FullStack Developer @ Finvo</h3>
-          <p>January 2022 - May 2022</p>
+          <h3>FullStack Developer @ Finvo - Part time</h3>
+          <p>August 2022 - Present</p>
         </div>
         <div>
           <p>Designed 15+ pages for Finvo system;</p>
