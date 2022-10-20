@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Frameworks from './sections/Frameworks'
 import Languages from './sections/Languages'
+import Tools from './sections/Tools'
 import VerticalLine from './VerticalLine'
 import WindowCard from './WindowCard'
 
@@ -54,6 +55,7 @@ const CardsContainer = () => {
       >
         <Languages />
         <Frameworks />
+        <Tools />
       </WindowCard>
     </Container>
   )
